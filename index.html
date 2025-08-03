@@ -8,6 +8,11 @@
   <title>Malisa Maisarah</title>
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/dbcb87af55.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -18,19 +23,19 @@
   <!-- Navigation - Start -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a href="#hero" class="navbar-brand">
-        <i class="fa-solid fa-heart"></i> Malisa Maisarah | My Sweet Pie
+      <a class="navbar-brand" href="#hero">
+        <i class="fas fa-heart me-2"></i>Malisa Maisarah | My Sweet Pie
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-targe="navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a href="#about" class="nav-link">Who Is She</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">Who Is She</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">Who Is She</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">Who Is She</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">Who Is She</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about-her">Who Is She</a></li>
+          <li class="nav-item"><a class="nav-link" href="#her-magic">Her Talents</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proud-moments">Proud Moments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#our-memories">Memories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#your-bf-contact">I'm Here For You <i class="fas fa-heart me-2"></i></a></li>
         </ul>
       </div>
     </div>
@@ -38,47 +43,379 @@
   <!-- Navigation - End -->
 
   <!-- Hero Section - Start -->
-  <section class="hero-section" id="hero">
+  <section id="hero" class="hero-section">
     <!-- Background Video -->
-    <video src="" class="hero-video" autoplay muted loop playsinline>
-      <source type="video/mp4">
-      <source type="video/webm">
-      <!-- Fallback gradient if the video doesn't load -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="/assets/video/3141319-uhd_3840_2160_25fps.mp4" type="video/mp4">
+      <source src="/assets/video/hero-background.webm" type="video/webm">
+      <!-- Fallback gradient if video doesn't load -->
       <div
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);">
       </div>
     </video>
 
-    <!-- overlay for better text readbility -->
+    <!-- Overlay for better text readability -->
     <div class="hero-overlay"></div>
 
     <div class="container hero-content">
       <div class="row align-items-center">
-
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1 class="display-4 fw-bold mb-4">Malisa Maisarah</h1>
+          <h3 class="mb-4">Amazing Girlfriend & Life Partner</h3>
+          <p class="lead mb-4">Professional in stealing hearts, expert in making every day brighter, and
+            certified specialist in being absolutely incredible.</p>
+          <div class="mb-4">
+            <span class="badge bg-light text-dark me-2 p-2">Relationship Expert</span>
+            <span class="badge bg-light text-dark me-2 p-2">Happiness Creator</span>
+            <span class="badge bg-light text-dark p-2">Dream Girl</span>
+          </div>
+          <button class="btn btn-custom me-3" onclick="createHeart()">
+            <i class="fas fa-heart me-2"></i>Send Love
+          </button>
+          <a href="#about" class="btn btn-outline-light">Learn More</a>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="/assets/img/header_pic.jpg" alt="malisa" class="profile-img">
+        </div>
       </div>
     </div>
   </section>
   <!-- Hero Section - End -->
 
   <!-- About Section - Start -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title">About Malisa Maisarah</h2>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h4 class="text-primary mb-3">The One & Only</h4>
+          <p class="mb-4">Malisa Maisarah is not just a girlfriend - she's a masterpiece of kindness,
+            intelligence, and
+            beauty. With her infectious laugh and caring heart, she transforms ordinary moments into
+            extraordinary memories.</p>
+          <p class="mb-4">Her unique combination of wit, compassion, and adventurous spirit makes every day an
+            exciting journey. She's the type of person who remembers your favorite coffee order, supports
+            your wildest dreams, and somehow makes even grocery shopping feel like a fun adventure.</p>
+          <div class="love-stats">
+            <div class="row">
+              <div class="col-md-3 stat-item">
+                <div class="stat-number" id="daysCounter">365</div>
+                <small class="text-muted">Days of Happiness</small>
+              </div>
+              <div class="col-md-3 stat-item">
+                <div class="stat-number">∞</div>
+                <small class="text-muted">Love Level</small>
+              </div>
+              <div class="col-md-3 stat-item">
+                <div class="stat-number">100%</div>
+                <small class="text-muted">Perfection Rate</small>
+              </div>
+              <div class="col-md-3 stat-item">
+                <div class="stat-number">1</div>
+                <small class="text-muted">In a Million</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="/assets/img/portfolio_pic.jpg" alt="Malisa Maisarah lifestyle"
+            class="img-fluid rounded-4 clear shadow">
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- About Section - End -->
 
   <!-- Skills Section - Start -->
+  <section id="her-magic" class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">Her Magic & Talents</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="skill-card text-center">
+            <div class="skill-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h5>Love & Affection</h5>
+            <p>Expert level in giving hugs, kisses, and making you feel like the luckiest person alive.</p>
+            <div class="progress mb-2">
+              <div class="progress-bar"
+                style="width: 100%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+              </div>
+            </div>
+            <small>100% Proficiency</small>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="skill-card text-center">
+            <div class="skill-icon">
+              <i class="fas fa-smile"></i>
+            </div>
+            <h5>Happiness Creation</h5>
+            <p>Certified professional in turning any bad day into the best day with just a smile.</p>
+            <div class="progress mb-2">
+              <div class="progress-bar"
+                style="width: 98%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+              </div>
+            </div>
+            <small>98% Proficiency</small>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="skill-card text-center">
+            <div class="skill-icon">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h5>Cooking Magic</h5>
+            <p>Transforms simple ingredients into culinary masterpieces that taste like pure love.</p>
+            <div class="progress mb-2">
+              <div class="progress-bar"
+                style="width: 95%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+              </div>
+            </div>
+            <small>95% Proficiency</small>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="skill-card text-center">
+            <div class="skill-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h5>Intelligence & Wisdom</h5>
+            <p>Brilliant mind that solves problems, gives great advice, and wins every trivia night.</p>
+            <div class="progress mb-2">
+              <div class="progress-bar"
+                style="width: 97%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+              </div>
+            </div>
+            <small>97% Proficiency</small>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="skill-card text-center">
+            <div class="skill-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <h5>Entertainment</h5>
+            <p>Master of fun times, great conversations, and creating unforgettable memories together.</p>
+            <div class="progress mb-2">
+              <div class="progress-bar"
+                style="width: 99%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+              </div>
+            </div>
+            <small>99% Proficiency</small>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="skill-card text-center">
+            <div class="skill-icon">
+              <i class="fas fa-gem"></i>
+            </div>
+            <h5>Being Perfect</h5>
+            <p>Natural talent for being absolutely amazing in every way possible. No training required.</p>
+            <div class="progress mb-2">
+              <div class="progress-bar"
+                style="width: 100%; background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+              </div>
+            </div>
+            <small>100% Proficiency</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Skills Section - End -->
 
   <!-- Achivement Section - Start -->
+  <section id="achievements" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">Notable Achievements</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="achievement-card">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <i class="fas fa-trophy text-warning fs-2"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="mb-1">World's Best Girlfriend Award</h6>
+                <small class="text-muted">Unanimously voted by one very lucky boyfriend</small>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-card">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <i class="fas fa-heart text-danger fs-2"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="mb-1">Heart Stealer Certification</h6>
+                <small class="text-muted">Licensed to make people fall in love at first sight</small>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-card">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <i class="fas fa-star text-warning fs-2"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="mb-1">Perfect Day Creator</h6>
+                <small class="text-muted">Specialist in turning ordinary moments into magical
+                  memories</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="achievement-card">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <i class="fas fa-medal text-primary fs-2"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="mb-1">Smile Generator Expert</h6>
+                <small class="text-muted">Advanced degree in making people happy just by
+                  existing</small>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-card">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <i class="fas fa-crown text-warning fs-2"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="mb-1">Queen of My Heart</h6>
+                <small class="text-muted">Lifetime achievement for ruling over all feelings and
+                  emotions</small>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-card">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <i class="fas fa-infinity text-info fs-2"></i>
+              </div>
+              <div class="col-10">
+                <h6 class="mb-1">Unlimited Love Provider</h6>
+                <small class="text-muted">Certified to give endless hugs, kisses, and affection</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Achivement Section - End -->
 
   <!-- Gallery Section - Start -->
+  <section id="gallery" class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">Memories When We Are Together</h2>
+          <p class="lead mb-5">A showcase of beautiful moments and memories</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="" alt="Adventure" class="gallery-img" onclick="openImageModal(this.src, this.alt)">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="" alt="Nature" class="gallery-img" onclick="openImageModal(this.src, this.alt)">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="" alt="Sunset" class="gallery-img" onclick="openImageModal(this.src, this.alt)">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="" alt="City" class="gallery-img" onclick="openImageModal(this.src, this.alt)">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="" alt="Mountains" class="gallery-img" onclick="openImageModal(this.src, this.alt)">
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <img src="" alt="Beach" class="gallery-img" onclick="openImageModal(this.src, this.alt)">
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Gallery Section - End -->
 
   <!-- Image Modal - Start -->
+  <div id="imageModal" class="image-modal">
+    <div class="image-modal-content">
+      <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
+      <button class="image-modal-nav image-modal-prev" onclick="changeImage(-1)">&#10094;</button>
+      <button class="image-modal-nav image-modal-next" onclick="changeImage(1)">&#10095;</button>
+      <img id="modalImage" src="" alt="" class="modal-image">
+      <div class="image-modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
   <!-- Image Modal - End -->
 
   <!-- Contact Section - Start -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">I'm Here With You</h2>
+          <p class="lead mb-5">Ready to experience the magic? Here's how to reach the amazing Malisa Maisarah</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="row g-4">
+            <div class="col-md-6 text-center">
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <h5>Love Department</h5>
+                <p>Available 24/7 for hugs, kisses, and unlimited affection</p>
+                <button class="btn btn-custom" onclick="createHeart()">Send Love</button>
+              </div>
+            </div>
+            <div class="col-md-6 text-center">
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <h5>Direct Line</h5>
+                <p>For all your girlfriend needs and cute conversations</p>
+                <button class="btn btn-custom">Call Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-5">
+            <h4 class="text-primary mb-3">Happy National Girlfriend Day!</h4>
+            <p class="lead">Malisa Maisarah, you make every day feel like a celebration. Thank you for being
+              absolutely incredible! 💕</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Contact Section - End -->
 
   <!-- Footer - Start -->
+  <footer class="gradient-bg text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Malisa Maisarah's Portfolio. Made with ❤️ for National Girlfriend Day</p>
+    </div>
+  </footer>
   <!-- Footer - End -->
   <script type="module" src="/src/main.js"></script>
 </body>
