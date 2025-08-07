@@ -6,8 +6,3 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // CSS
 import '/assets/css/main.css';
-
-
-
-
-
