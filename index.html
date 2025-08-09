@@ -59,6 +59,9 @@
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="row align-items-center">
+        <div class="col-lg-6 text-center">
+          <img src="/assets/img/header/header_pic.jpg" loading="lazy" alt="malisa" class="profile-img">
+        </div>
         <div class="col-lg-6 text-center text-lg-start">
           <h1 class="display-4 fw-bold mb-4">Malisa Maisarah</h1>
           <h3 class="mb-4">Amazing Girlfriend & Life Partner</h3>
@@ -73,9 +76,6 @@
             <i class="fas fa-heart me-2"></i>Send Love
           </button>
           <a href="#about" class="btn btn-outline-light">Learn More</a>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="/assets/img/header/header_pic.jpg" alt="malisa" class="profile-img">
         </div>
       </div>
     </div>
@@ -94,8 +94,7 @@
         <div class="col-lg-6">
           <h4 class="text-primary mb-3">The One & Only</h4>
           <p class="mb-4">Malisa Maisarah is not just a girlfriend - she's a masterpiece of kindness,
-            intelligence, and
-            beauty. With her infectious laugh and caring heart, she transforms ordinary moments into
+            intelligence, and beauty. With her infectious laugh and caring heart, she transforms ordinary moments into
             extraordinary memories.</p>
           <p class="mb-4">Her unique combination of wit, compassion, and adventurous spirit makes every day an
             exciting journey. She's the type of person who remembers your favorite coffee order, supports
@@ -103,7 +102,7 @@
           <div class="love-stats">
             <div class="row">
               <div class="col-md-3 stat-item">
-                <div class="stat-number" id="daysCounter">365</div>
+                <div class="stat-number" id="daysCounter">0</div>
                 <small class="text-muted">Days of Happiness</small>
               </div>
               <div class="col-md-3 stat-item">
@@ -121,8 +120,8 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <img src="assets/img/profile/portfolio_pic.jpg" alt="Malisa-Maisarah-Picture"
+        <div class="col-lg-5">
+          <img src="assets/img/profile/portfolio_pic.jpg" loading="lazy" alt="Malisa-Maisarah-Picture"
             class="img-fluid rounded-4 clear shadow">
         </div>
       </div>
@@ -332,27 +331,27 @@
       </div>
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
-          <img src="/assets/img/gallery/1.jpg" alt="Adventure" class="gallery-img"
+          <img src="/assets/img/gallery/1.jpg" loading="lazy" alt="Adventure" class="gallery-img"
             onclick="openImageModal(this.src, this.alt)">
         </div>
         <div class="col-lg-4 col-md-6">
-          <img src="/assets/img/gallery/2.jpg" alt="Nature" class="gallery-img"
+          <img src="/assets/img/gallery/2.jpg" loading="lazy" alt="Nature" class="gallery-img"
             onclick="openImageModal(this.src, this.alt)">
         </div>
         <div class="col-lg-4 col-md-6">
-          <img src="/assets/img/gallery/3.jpg" alt="Sunset" class="gallery-img"
+          <img src="/assets/img/gallery/3.jpg" loading="lazy" alt="Sunset" class="gallery-img"
             onclick="openImageModal(this.src, this.alt)">
         </div>
         <div class="col-lg-4 col-md-6">
-          <img src="/assets/img/gallery/4.jpg" alt="City" class="gallery-img"
+          <img src="/assets/img/gallery/4.jpg" loading="lazy" alt="City" class="gallery-img"
             onclick="openImageModal(this.src, this.alt)">
         </div>
         <div class="col-lg-4 col-md-6">
-          <img src="/assets/img/gallery/5.jpg" alt="Mountains" class="gallery-img"
+          <img src="/assets/img/gallery/5.jpg" loading="lazy" alt="Mountains" class="gallery-img"
             onclick="openImageModal(this.src, this.alt)">
         </div>
         <div class="col-lg-4 col-md-6">
-          <img src="/assets/img/gallery/6.jpg" alt="Beach" class="gallery-img"
+          <img src="/assets/img/gallery/6.jpg" loading="lazy" alt="Beach" class="gallery-img"
             onclick="openImageModal(this.src, this.alt)">
         </div>
       </div>
@@ -401,7 +400,8 @@
                 </div>
                 <h5>Direct Line</h5>
                 <p>For all your girlfriend needs and cute conversations</p>
-                <button class="btn btn-custom">Boyfriend Contact</button>
+                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#contactModal">Boyfriend
+                  Contact</button>
               </div>
             </div>
           </div>
@@ -414,10 +414,43 @@
       </div>
     </div>
   </section>
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">💌 Boyfriend's Contact</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p class="mb-3">Let’s stay connected everywhere! ❤️</p>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/60193608709" target="_blank" class="btn btn-success mb-2 w-100">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/justcallmeaiman_" target="_blank" class="btn btn-danger mb-2 w-100">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+
+          <!-- TikTok -->
+          <a href="https://tiktok.com/@aiiimaann" target="_blank" class="btn btn-dark mb-2 w-100">
+            <i class="fab fa-tiktok"></i> TikTok
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:aimanzulbahari@gmail.com" class="btn btn-primary mb-2 w-100">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Contact Section - End -->
 
-  <!-- Back To Top - Start -->
-  <!-- Back To Top - End -->
+  <div class="back-to-top" id="backToTop"><div class="arrow"></div></div>
 
   <!-- Footer - Start -->
   <footer class="gradient-bg text-white text-center py-4">
@@ -450,7 +483,7 @@
 
       setTimeout(() => {
         heart.remove();
-      }, 6000);
+      }, 8000);
     }
 
     // Auto-create hearts every few seconds
@@ -459,9 +492,20 @@
     // Counter animation
     function animateCounter() {
       const counter = document.getElementById('daysCounter');
+
+      // Our starting date
+      const startDate = new Date(2025, 4, 15); // Month is 0-based, so 4 = May
+
+      // Today's date
+      const today = new Date();
+
+      // Calculate the difference in days
+      const diffTime = today - startDate;
+      const target = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+      // Animation logic
       let count = 0;
-      const target = 365;
-      const increment = target / 100;
+      const increment = target / 100; // Speed of animation
 
       const timer = setInterval(() => {
         count += increment;
@@ -473,6 +517,8 @@
         }
       }, 20);
     }
+
+    animateCounter();
 
     // Start counter when page loads
     window.addEventListener('load', animateCounter);
@@ -580,10 +626,26 @@
         }
       }
     });
-  </script>
-  <script>
 
+    // Back to top functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        // Smooth scroll to top when clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
   </script>
 </body>
-
 </html>

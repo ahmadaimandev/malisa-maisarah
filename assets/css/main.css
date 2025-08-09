@@ -6,6 +6,10 @@
     --text-light: #636e72;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
@@ -84,7 +88,7 @@ body {
     .hero-video {
         object-position: center;
     }
-    
+
     .hero-overlay {
         background: rgba(0, 0, 0, 0.4);
     }
@@ -95,15 +99,15 @@ body {
     .hero-video {
         display: none;
     }
-    
+
     .hero-section {
         background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
     }
 }
 
 .profile-img {
-    width: 550px;
-    height: 550px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     border: 8px solid rgba(255, 255, 255, 0.2);
     object-fit: cover;
@@ -135,7 +139,7 @@ body {
         width: 300px;
         height: 300px;
     }
-    
+
     /* Ensure buttons stay in their column on mobile */
     .hero-content .col-lg-6:first-child {
         margin-bottom: 2rem;
@@ -147,17 +151,17 @@ body {
         width: 250px;
         height: 250px;
     }
-    
+
     /* Stack content properly on small screens */
     .hero-content .row {
         flex-direction: column;
     }
-    
+
     .hero-content .col-lg-6:first-child {
         order: 1;
         margin-bottom: 2rem;
     }
-    
+
     .hero-content .col-lg-6:last-child {
         order: 2;
     }
@@ -425,6 +429,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -435,6 +440,7 @@ body {
         transform: scale(0.8);
         opacity: 0;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
@@ -480,4 +486,115 @@ body {
 .gallery-img:hover::after {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
+}
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 107, 157, 0.8);
+    border: 2px solid #ffa3d9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:hover .arrow {
+    border-bottom-color: white;
+}
+
+.back-to-top:active {
+    transform: translateY(0);
+}
+
+/* Minimalist Arrow */
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid #333;
+    transition: all 0.3s ease;
+}
+
+
+.contact-popup {
+    border-radius: 20px;
+    background: linear-gradient(145deg, #fff0f6, #ffffff);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+    animation: popIn 0.35s ease-out;
+}
+
+.contact-popup .modal-title {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #e91e63;
+}
+
+.contact-popup p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.social-btn {
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-btn.whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+    color: white;
+}
+
+.social-btn.tiktok {
+    background: #010101;
+    color: white;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
