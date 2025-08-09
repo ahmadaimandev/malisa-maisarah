@@ -6,6 +6,36 @@
     --text-light: #636e72;
 }
 
+/* Custom Scrollbar (Webkit Browsers: Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px;
+    /* scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    background: #ffe6ec;
+    /* light pink track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    border-radius: 10px;
+    border: 2px solid #ffe6ec;
+    /* gap between thumb and track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #e91e63 #ffe6ec;
+    /* thumb color + track color */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -164,6 +194,76 @@ body {
 
     .hero-content .col-lg-6:last-child {
         order: 2;
+    }
+}
+
+/* Flip Card Container */
+.flip-card {
+    perspective: 1000px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back Faces */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    z-index: 2;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Badge Styling */
+.flip-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #e91e63;
+    color: white;
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
