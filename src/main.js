@@ -6,3 +6,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // CSS
 import '/assets/css/main.css';
+import '/assets/css/scrollbar.css';
+import '/assets/css/navbar.css';
+import '/assets/css/backtotop.css';
+import '/assets/css/hero.css';
+import '/assets/css/profileimage.css';
+import '/assets/css/gallery.css';
+import '/assets/css/custom-button.css';
+import '/assets/css/skill-card.css';
