@@ -14,3 +14,9 @@ import '/assets/css/profileimage.css';
 import '/assets/css/gallery.css';
 import '/assets/css/custom-button.css';
 import '/assets/css/skill-card.css';
+import '/assets/css/floating-heart.css';
+import '/assets/css/achivement.css';
+import '/assets/css/statistic.css';
+
+
+

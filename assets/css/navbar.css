@@ -1,7 +1,35 @@
 .navbar {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.15) !important;
+    /* light glass */
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: #333 !important;
+    /* make links white on glass */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--primary-color) !important;
+    /* highlight on hover */
+}
+
+.navbar .nav-link.active {
+    color: var(--primary-color) !important;
+    /* active link color */
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
 }
 
 .navbar-brand {

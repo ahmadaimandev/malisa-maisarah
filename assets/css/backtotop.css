@@ -26,13 +26,12 @@
 }
 
 .back-to-top:hover {
-    background: #333;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .back-to-top:hover .arrow {
-    border-bottom-color: white;
+    border-bottom-color: rgb(0, 0, 0);
 }
 
 .back-to-top:active {
