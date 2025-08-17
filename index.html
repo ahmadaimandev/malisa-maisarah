@@ -495,11 +495,17 @@
         }, 1000);
       }
     }
-    // Method 3: Hide when DOM is ready (faster fallback)
-    document.addEventListener('DOMContentLoaded', function () {
-      // If page loads quickly, hide preloader sooner
-      setTimeout(hidePreloader, 2000);
-    });
+    // // Method 1: Hide when page fully loads
+    // window.addEventListener('load', hidePreloader);
+
+    // Method 2: Hide after a maximum timeout (network fallback)
+    setTimeout(hidePreloader, 8000); // 8 seconds max wait
+
+    // // Method 3: Hide when DOM is ready (faster fallback)
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   // If page loads quickly, hide preloader sooner
+    //   setTimeout(hidePreloader, 2000);
+    // });
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
