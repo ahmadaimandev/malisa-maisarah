@@ -1,4 +1,8 @@
 /* Preloader Styles */
+body.preloader-active {
+  overflow: hidden;
+}
+
 .preloader {
   position: fixed;
   top: 0;

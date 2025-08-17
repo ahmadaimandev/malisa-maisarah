@@ -410,7 +410,8 @@
                 </div>
                 <h5>Direct Line</h5>
                 <p>For all your girlfriend needs and cute conversations</p>
-                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#socialMediaModal">Get In Touch</button>
+                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#socialMediaModal">Get In
+                  Touch</button>
               </div>
             </div>
           </div>
@@ -488,24 +489,27 @@
     // Preloader functionality with network fallback
     function hidePreloader() {
       const preloader = document.getElementById('preloader');
-      if (preloader) {
+      if (preloader && !preloader.classList.contains('fade-out')) {
         preloader.classList.add('fade-out');
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 1000);
+        document.body.classList.remove('preloader-active'); // allow scrolling again
+        setTimeout(() => preloader.style.display = 'none', 1000);
       }
     }
-    // // Method 1: Hide when page fully loads
-    // window.addEventListener('load', hidePreloader);
 
-    // Method 2: Hide after a maximum timeout (network fallback)
-    setTimeout(hidePreloader, 8000); // 8 seconds max wait
+    // Enable scroll lock when preloader starts
+    document.body.classList.add('preloader-active');
 
-    // // Method 3: Hide when DOM is ready (faster fallback)
-    // document.addEventListener('DOMContentLoaded', function () {
-    //   // If page loads quickly, hide preloader sooner
-    //   setTimeout(hidePreloader, 2000);
-    // });
+    // 1. Hide when page fully loaded
+    window.addEventListener('load', hidePreloader);
+
+    // 2. Fallback: hide after 8s max
+    setTimeout(hidePreloader, 8000);
+
+    // 3. Optional: hide earlier if DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(hidePreloader, 2000);
+    });
+
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
