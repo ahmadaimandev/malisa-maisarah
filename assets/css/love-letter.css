@@ -1,0 +1,78 @@
+.love-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+    border-radius: 20px;
+    border: none;
+}
+
+.love-letter {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    color: #2c3e50;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.love-photos {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.love-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.love-photo:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.photo-modal .modal-dialog {
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.photo-modal .modal-content {
+    background: rgba(0, 0, 0, 0.9);
+    border: none;
+    border-radius: 10px;
+}
+
+.photo-modal .modal-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.expanded-photo {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.signature {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5rem;
+    color: #e91e63;
+    text-align: right;
+    margin-top: 20px;
+}
