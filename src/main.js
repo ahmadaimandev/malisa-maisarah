@@ -19,6 +19,7 @@ import '/assets/css/floating-heart.css';
 import '/assets/css/achivement.css';
 import '/assets/css/statistic.css';
 import '/assets/css/ribbon.css';
+import '/assets/css/preloader.css'; 
 
 
 

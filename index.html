@@ -13,9 +13,59 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <!-- Preloader CSS -->
+  <link rel="stylesheet" href="assets/css/preloader.css">
+  <!-- Inline critical preloader styles as fallback -->
+  <style>
+    /* Critical preloader styles - works even if external CSS fails */
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ff6b9d 0%, #c44569 50%, #f8b500 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 1s ease-in-out;
+    }
+    .preloader.fade-out { opacity: 0; }
+    .preloader-content { text-align: center; color: white; }
+    .preloader-heart { font-size: 4rem; margin-bottom: 1rem; }
+    .preloader-text { font-size: 1.5rem; font-weight: 600; margin-bottom: 2rem; }
+    .preloader-spinner { 
+      width: 50px; height: 50px; 
+      border: 4px solid rgba(255,255,255,0.3); 
+      border-top: 4px solid white; 
+      border-radius: 50%; 
+      margin: 0 auto; 
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    .preloader-heart { animation: heartbeat 1.5s ease-in-out infinite; }
+  </style>
 </head>
 
 <body>
+  <!-- Preloader - Start -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-heart">💖</div>
+      <div class="preloader-text">Loading Love...</div>
+      <div class="preloader-spinner"></div>
+    </div>
+  </div>
+  <!-- Preloader - End -->
+
   <!-- Floating Hearts - Start -->
   <div class="floating-hearts" id="floatingHearts"></div>
   <!-- Floating Hearts - End -->
@@ -134,7 +184,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h2 class="section-title">Core Skills & Talents</h2>
+          <h2 class="section-title">Her Skills And Talent</h2>
         </div>
       </div>
       <div class="row g-4">
@@ -238,7 +288,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h2 class="section-title">Notable Achievements</h2>
+          <h2 class="section-title">Her Achievements</h2>
         </div>
       </div>
       <div class="row">
@@ -464,6 +514,29 @@
   <!-- Footer - End -->
   <script type="module" src="/src/main.js"></script>
   <script>
+    // Preloader functionality with network fallback
+    function hidePreloader() {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.classList.add('fade-out');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1000);
+      }
+    }
+
+    // Method 1: Hide when page fully loads
+    window.addEventListener('load', hidePreloader);
+    
+    // Method 2: Hide after a maximum timeout (network fallback)
+    setTimeout(hidePreloader, 8000); // 8 seconds max wait
+    
+    // Method 3: Hide when DOM is ready (faster fallback)
+    document.addEventListener('DOMContentLoaded', function() {
+      // If page loads quickly, hide preloader sooner
+      setTimeout(hidePreloader, 2000);
+    });
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
