@@ -13,7 +13,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <!-- Preloader CSS -->
 </head>
 
 <body>
@@ -411,56 +410,69 @@
                 </div>
                 <h5>Direct Line</h5>
                 <p>For all your girlfriend needs and cute conversations</p>
-                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#contactModal">Boyfriend
+                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#socialMediaModal">Boyfriend
                   Contact</button>
               </div>
             </div>
-          </div>
-          <div class="text-center mt-5">
-            <h4 class="text-primary mb-3">Happy National Girlfriend Day!</h4>
-            <p class="lead">Malisa Maisarah, you make every day feel like a celebration. Thank you for being
-              absolutely incredible! 💕</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- Contact Modal -->
-  <div class="modal fade contact-popup" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+  <!-- Social Media Modal with Photo - Start -->
+  <div class="modal fade" id="socialMediaModal" tabindex="-1" aria-labelledby="socialMediaModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="contactModalLabel">💌 Boyfriend's Contact</h5>
+          <h5 class="modal-title" id="socialMediaModalLabel">
+            <i class="fas fa-heart text-danger me-2"></i>Connect with Malisa
+          </h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-center">
-          <p class="mb-3">Let’s stay connected everywhere! ❤️</p>
+          <!-- Profile Photo -->
+          <div class="modal-photo-container mb-4">
+            <img src="assets/img/profile/portfolio_pic.jpg" alt="Malisa Maisarah" class="modal-profile-photo">
+            <div class="photo-overlay">
+              <h4 class="text-white mb-2">Malisa Maisarah</h4>
+              <p class="text-white-50 mb-0">Let's stay connected! 💕</p>
+            </div>
+          </div>
 
-          <!-- WhatsApp -->
-          <a href="https://wa.me/60193608709" target="_blank" class="btn btn-success mb-2 w-100">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-
-          <!-- Instagram -->
-          <a href="https://instagram.com/justcallmeaiman_" target="_blank" class="btn btn-danger mb-2 w-100">
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-
-          <!-- TikTok -->
-          <a href="https://tiktok.com/@aiiimaann" target="_blank" class="btn btn-dark mb-2 w-100">
-            <i class="fab fa-tiktok"></i> TikTok
-          </a>
-
-          <!-- Email -->
-          <a href="mailto:aimanzulbahari@gmail.com" class="btn btn-primary mb-2 w-100">
-            <i class="fas fa-envelope"></i> Email
-          </a>
+          <!-- Social Media Buttons -->
+          <div class="row g-3">
+            <div class="col-md-6">
+              <a href="https://wa.me/60193608709" target="_blank" class="btn btn-success w-100 social-btn">
+                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="https://instagram.com/justcallmeaiman_" target="_blank" class="btn btn-danger w-100 social-btn">
+                <i class="fab fa-instagram me-2"></i>Instagram
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="https://tiktok.com/@aiiimaann" target="_blank" class="btn btn-dark w-100 social-btn">
+                <i class="fab fa-tiktok me-2"></i>TikTok
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="mailto:aimanzulbahari@gmail.com" class="btn btn-primary w-100 social-btn">
+                <i class="fas fa-envelope me-2"></i>Email
+              </a>
+            </div>
+          </div>
+          <!-- Additional Info -->
+          <div class="mt-4 p-3 bg-light rounded">
+            <p class="mb-2"><i class="fas fa-clock text-primary me-2"></i>Available 24/7 for love and support</p>
+            <p class="mb-0"><i class="fas fa-heart text-danger me-2"></i>Always here to make your day brighter</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Contact Section - End -->
+   <!-- Social Media Modal with Photo - End -->
 
   <div class="back-to-top" id="backToTop">
     <div class="arrow"></div>
@@ -488,12 +500,12 @@
 
     // Method 1: Hide when page fully loads
     window.addEventListener('load', hidePreloader);
-    
+
     // Method 2: Hide after a maximum timeout (network fallback)
     setTimeout(hidePreloader, 8000); // 8 seconds max wait
-    
+
     // Method 3: Hide when DOM is ready (faster fallback)
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // If page loads quickly, hide preloader sooner
       setTimeout(hidePreloader, 2000);
     });

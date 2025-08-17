@@ -18,8 +18,8 @@ import '/assets/css/skill-card.css';
 import '/assets/css/floating-heart.css';
 import '/assets/css/achivement.css';
 import '/assets/css/statistic.css';
-import '/assets/css/ribbon.css';
 import '/assets/css/preloader.css'; 
+import '/assets/css/social-modal.css'; 
 
 
 
