@@ -50,7 +50,9 @@
       <source src="/assets/video/bg-video.MOV" type="video/mp4">
       <source src="/assets/video/hero-background.webm" type="video/webm">
       <!-- Fallback gradient if video doesn't load -->
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);"></div>
+      <div
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);">
+      </div>
     </video>
 
     <!-- Overlay for better text readability -->
@@ -384,11 +386,11 @@
             <div class="col-md-6 text-center">
               <div class="skill-card">
                 <div class="skill-icon">
-                  <i class="fas fa-heart"></i>
+                  <i class="fas fa-envelope"></i>
                 </div>
                 <h5>Love Department</h5>
                 <p>Available 24/7 for hugs, kisses, and unlimited affection</p>
-                <button class="btn btn-custom" onclick="createHeart()">Send Love</button>
+                <button class="btn btn-custom" onclick="createHeart()">Open Love Letter</button>
               </div>
             </div>
             <div class="col-md-6 text-center">
@@ -413,7 +415,8 @@
     </div>
   </section>
   <!-- Contact Modal -->
-  <div class="modal fade contact-popup" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal fade contact-popup" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -448,7 +451,9 @@
   </div>
   <!-- Contact Section - End -->
 
-  <div class="back-to-top" id="backToTop"><div class="arrow"></div></div>
+  <div class="back-to-top" id="backToTop">
+    <div class="arrow"></div>
+  </div>
 
   <!-- Footer - Start -->
   <footer class="gradient-bg text-white text-center py-4">
@@ -620,24 +625,25 @@
     });
 
     // Back to top functionality
-        const backToTopButton = document.getElementById('backToTop');
-        
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
-            }
-        });
-        
-        // Smooth scroll to top when clicked
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+
+    // Smooth scroll to top when clicked
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   </script>
 </body>
+
 </html>
